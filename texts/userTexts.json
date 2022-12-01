@@ -1,5 +1,6 @@
 {
     "startText": "Hi, please use this command /fill_form to fill the form",
+    "finishText": "Thanks for your reply",
     "questions": [
         {
             "text": "What is your name?",

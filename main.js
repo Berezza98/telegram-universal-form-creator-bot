@@ -26,6 +26,7 @@ bot.start((ctx) => {
 });
 
 bot.command('set_start_text', Scenes.Stage.enter(sceneNames.SET_START_TEXT_SCENE));
+bot.command('set_finish_text', Scenes.Stage.enter(sceneNames.SET_FINISH_TEXT_SCENE));
 bot.command('edit_questions', Scenes.Stage.enter(sceneNames.EDIT_QUESTIONS_SCENE));
 bot.command('create_question', Scenes.Stage.enter(sceneNames.CREATE_QUESTION_SCENE));
 
