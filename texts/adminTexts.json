@@ -1,0 +1,3 @@
+{
+  "startText": "Welcome Admin!!! \n\n/set_start_text - Change start text for any user\n/restart - Restart Application after all changes\n/edit_questions - Edit existed questions\n/create_question - Create new question"
+}

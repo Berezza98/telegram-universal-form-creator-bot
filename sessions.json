@@ -1,0 +1,29 @@
+{
+  "sessions": [
+    {
+      "id": "666372160:666372160",
+      "data": {
+        "__scenes": {
+          "current": "EDIT_QUESTIONS_SCENE",
+          "state": {}
+        },
+        "question": {
+          "text": "before last",
+          "resultKey": "before_last"
+        }
+      }
+    },
+    {
+      "id": "1857915800:1857915800",
+      "data": {
+        "__scenes": {},
+        "age": "/start",
+        "mood": "Ок",
+        "name": "Р",
+        "newQuestionResult": "123",
+        "before_last": "1",
+        "last": "12"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+    "startText": "Hi, please use this command /fill_form to fill the form",
+    "questions": [
+        {
+            "text": "What is your name?",
+            "resultKey": "name"
+        },
+        {
+            "text": "Your age:",
+            "resultKey": "age"
+        },
+        {
+            "text": "How are you?",
+            "resultKey": "mood"
+        },
+        {
+            "text": "New question",
+            "resultKey": "newQuestionResult"
+        },
+        {
+            "text": "before last",
+            "resultKey": "before_last"
+        },
+        {
+            "text": "the last one",
+            "resultKey": "last"
+        }
+    ]
+}
