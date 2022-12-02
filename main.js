@@ -36,7 +36,7 @@ bot.command('get_all_questions', onlyAdmin, (ctx) => {
 
   const formattedText = questions.map(({ text, resultKey }) => `Text:\n${text}\nResult key:\n${resultKey}`).join('\n\n');
 
-  ctx.reply();
+  ctx.reply(formattedText);
 });
 bot.command('restart', onlyAdmin, (ctx) => {
   bot.stop();
