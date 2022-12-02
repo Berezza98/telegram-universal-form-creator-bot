@@ -1,4 +1,4 @@
-const { Telegraf, Telegram, Scenes } = require('telegraf');
+const { Telegraf, Scenes } = require('telegraf');
 const LocalSession = require('telegraf-session-local');
 const child_process = require('child_process');
 
@@ -13,10 +13,7 @@ const consts = require('./consts');
 require('dotenv').config();
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
-const telegram = new Telegram(process.env.BOT_TOKEN);
 const stage = new Scenes.Stage(scenes);
-
-// telegram.sendMessage(process.env.ADMIN_ID, 'Bot started!');
 
 bot.use((new LocalSession({ database: 'sessions.json' })).middleware())
 bot.use(stage.middleware());
