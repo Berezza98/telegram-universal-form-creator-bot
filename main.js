@@ -26,7 +26,7 @@ bot.use(isAdmin);
 bot.start((ctx) => {
   ctx.reply(texts[ctx.state.isAdmin ? 'adminTexts' : 'userTexts'].startText);
 
-  if (!ctx.state.isAdmin) return Scenes.Stage.enter(sceneNames.USER_FORM_SCENE);
+  if (!ctx.state.isAdmin) return ctx.scene.enter(sceneNames.USER_FORM_SCENE);
 });
 
 bot.command('set_start_text', onlyAdmin, Scenes.Stage.enter(sceneNames.SET_START_TEXT_SCENE));
