@@ -29,13 +29,12 @@ bot.start((ctx) => {
   if (!ctx.state.isAdmin) return Scenes.Stage.enter(sceneNames.USER_FORM_SCENE);
 });
 
-bot.command('set_start_text', [onlyAdmin, Scenes.Stage.enter(sceneNames.SET_START_TEXT_SCENE)]);
-bot.command('set_finish_text', [onlyAdmin, Scenes.Stage.enter(sceneNames.SET_FINISH_TEXT_SCENE)]);
-bot.command('edit_questions', [onlyAdmin, Scenes.Stage.enter(sceneNames.SELECT_QUESTION_SCENE, { action: consts.EDIT_ACTION })]);
-bot.command('delete_question', [onlyAdmin, Scenes.Stage.enter(sceneNames.SELECT_QUESTION_SCENE, { action: consts.DELETE_ACTION })]);
-bot.command('create_question', [onlyAdmin, Scenes.Stage.enter(sceneNames.CREATE_QUESTION_SCENE)]);
-
-bot.command('restart', (ctx) => {
+bot.command('set_start_text', onlyAdmin, Scenes.Stage.enter(sceneNames.SET_START_TEXT_SCENE));
+bot.command('set_finish_text', onlyAdmin, Scenes.Stage.enter(sceneNames.SET_FINISH_TEXT_SCENE));
+bot.command('edit_questions', onlyAdmin, Scenes.Stage.enter(sceneNames.SELECT_QUESTION_SCENE, { action: consts.EDIT_ACTION }));
+bot.command('delete_question', onlyAdmin, Scenes.Stage.enter(sceneNames.SELECT_QUESTION_SCENE, { action: consts.DELETE_ACTION }));
+bot.command('create_question', onlyAdmin, Scenes.Stage.enter(sceneNames.CREATE_QUESTION_SCENE));
+bot.command('restart', onlyAdmin, (ctx) => {
   bot.stop();
 
   const cmd = 'node main.js';
