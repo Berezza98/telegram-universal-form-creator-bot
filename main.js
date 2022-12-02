@@ -34,7 +34,9 @@ bot.command('create_question', onlyAdmin, Scenes.Stage.enter(sceneNames.CREATE_Q
 bot.command('get_all_questions', onlyAdmin, (ctx) => {
   const questions = db.questions;
 
-  ctx.reply(questions.map(({ text, resultKey }) => `Text:\n${text}\nResult key:\n${resultKey}\n\n`));
+  const formattedText = questions.map(({ text, resultKey }) => `Text:\n${text}\nResult key:\n${resultKey}`).join('\n\n');
+
+  ctx.reply();
 });
 bot.command('restart', onlyAdmin, (ctx) => {
   bot.stop();
