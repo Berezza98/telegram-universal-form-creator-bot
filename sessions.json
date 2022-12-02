@@ -3,13 +3,10 @@
     {
       "id": "666372160:666372160",
       "data": {
-        "__scenes": {
-          "current": "EDIT_QUESTIONS_SCENE",
-          "state": {}
-        },
+        "__scenes": {},
         "question": {
-          "text": "before last",
-          "resultKey": "before_last"
+          "text": "/start",
+          "resultKey": "/start"
         }
       }
     },
@@ -17,12 +14,12 @@
       "id": "1857915800:1857915800",
       "data": {
         "__scenes": {},
-        "age": "/start",
+        "age": "24",
         "mood": "Ок",
         "name": "Р",
-        "newQuestionResult": "123",
-        "before_last": "1",
-        "last": "12"
+        "newQuestionResult": "1",
+        "before_last": "2",
+        "last": "3"
       }
     }
   ]

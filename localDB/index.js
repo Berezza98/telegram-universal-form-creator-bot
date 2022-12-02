@@ -39,6 +39,12 @@ class LocalDB {
     await this.save();
   }
 
+  async deleteQuestion(index) {
+    this.content.questions.splice(index, 1);
+
+    await this.save();
+  }
+
   async write(key, value) {
     this.content[key] = value;
 

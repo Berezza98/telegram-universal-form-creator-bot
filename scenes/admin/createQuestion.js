@@ -1,6 +1,7 @@
 const { Scenes } = require('telegraf');
 
 const db = require('../../config/db');
+const consts = require('../../consts');
 const { CREATE_QUESTION_SCENE } = require('../consts');
 
 const formElements = [
@@ -30,7 +31,7 @@ module.exports = new Scenes.WizardScene(
   async (ctx) => {
     ctx.session.question[formElements[formElements.length - 1].propName] = ctx.message.text;
 
-    if (ctx.wizard.state.edit) {
+    if (ctx.wizard.state.action === consts.EDIT_ACTION) {
       await db.editQuestion(ctx.wizard.state.questionIndex, ctx.session.question);
       ctx.reply('EDITED!');
       return ctx.scene.leave();

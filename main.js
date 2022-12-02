@@ -7,6 +7,7 @@ const isAdmin = require('./middlewars/isAdmin');
 const scenes = require('./scenes/index');
 const texts = require('./texts');
 const sceneNames = require('./scenes/consts');
+const consts = require('./consts');
 
 require('dotenv').config();
 
@@ -27,7 +28,8 @@ bot.start((ctx) => {
 
 bot.command('set_start_text', Scenes.Stage.enter(sceneNames.SET_START_TEXT_SCENE));
 bot.command('set_finish_text', Scenes.Stage.enter(sceneNames.SET_FINISH_TEXT_SCENE));
-bot.command('edit_questions', Scenes.Stage.enter(sceneNames.EDIT_QUESTIONS_SCENE));
+bot.command('edit_questions', Scenes.Stage.enter(sceneNames.SELECT_QUESTION_SCENE, { action: consts.EDIT_ACTION }));
+bot.command('delete_question', Scenes.Stage.enter(sceneNames.SELECT_QUESTION_SCENE, { action: consts.DELETE_ACTION }));
 bot.command('create_question', Scenes.Stage.enter(sceneNames.CREATE_QUESTION_SCENE));
 
 bot.command('fill_form', Scenes.Stage.enter(sceneNames.USER_FORM_SCENE));

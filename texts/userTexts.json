@@ -1,6 +1,6 @@
 {
     "startText": "Hi, please use this command /fill_form to fill the form",
-    "finishText": "Thanks for your reply",
+    "finishText": "Finish text",
     "questions": [
         {
             "text": "What is your name?",
@@ -13,10 +13,6 @@
         {
             "text": "How are you?",
             "resultKey": "mood"
-        },
-        {
-            "text": "New question",
-            "resultKey": "newQuestionResult"
         },
         {
             "text": "before last",
