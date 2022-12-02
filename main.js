@@ -41,7 +41,7 @@ bot.command('restart', (ctx) => {
 
   const cmd = 'node main.js';
   child_process.exec(cmd, async () => {
-    process.kill();
+    process.kill(process.pid);
   });
 });
 
