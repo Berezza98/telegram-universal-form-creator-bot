@@ -46,6 +46,7 @@ bot.command('restart', (ctx) => {
 });
 
 async function main() {
+  console.log(process.env.NODE_ENV === 'production' ? 'Launch in PROD mode' : 'Launch in DEV mode');
   const launchOptions = process.env.NODE_ENV === 'production'
     ? {
         webhook: {
