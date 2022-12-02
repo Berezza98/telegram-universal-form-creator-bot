@@ -46,8 +46,17 @@ bot.command('restart', (ctx) => {
 });
 
 async function main() {
+  const launchOptions = process.env.NODE_ENV === 'production'
+    ? {
+        webhook: {
+          domain: process.env.DOMAIN,
+          port: 80,
+        }
+      }
+    : undefined;
+
   await db.init();
-  bot.launch();
+  bot.launch(launchOptions);
 }
 
 main();
