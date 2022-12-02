@@ -31,6 +31,11 @@ bot.command('set_finish_text', onlyAdmin, Scenes.Stage.enter(sceneNames.SET_FINI
 bot.command('edit_questions', onlyAdmin, Scenes.Stage.enter(sceneNames.SELECT_QUESTION_SCENE, { action: consts.EDIT_ACTION }));
 bot.command('delete_question', onlyAdmin, Scenes.Stage.enter(sceneNames.SELECT_QUESTION_SCENE, { action: consts.DELETE_ACTION }));
 bot.command('create_question', onlyAdmin, Scenes.Stage.enter(sceneNames.CREATE_QUESTION_SCENE));
+bot.command('get_all_questions', onlyAdmin, (ctx) => {
+  const questions = db.questions;
+
+  ctx.reply(questions.map(({ text, resultKey }) => `Text:\n${text}\nResult key:\n${resultKey}\n\n`));
+});
 bot.command('restart', onlyAdmin, (ctx) => {
   bot.stop();
 

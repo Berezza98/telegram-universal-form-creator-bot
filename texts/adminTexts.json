@@ -1,5 +1,5 @@
 {
-  "startText": "Welcome Admin!!! \n\n/set_start_text - Change start text for users\n/set_finish_text - Change finish text for users\n/restart - Restart Application after all changes\n/edit_questions - Edit existed questions\n/delete_question - Delete existed question\n/create_question - Create new question",
+  "startText": "Welcome Admin!!! \n\n/get_all_questions - Get all questions\n/set_start_text - Change start text for users\n/set_finish_text - Change finish text for users\n/restart - Restart Application after all changes\n/edit_questions - Edit existed questions\n/delete_question - Delete existed question\n/create_question - Create new question",
   "noQuestions": {
     "edit": "You don`t have questions to edit. Use /create_question to create new one!",
     "delete": "You don`t have questions to delete. Use /create_question to create new one!"

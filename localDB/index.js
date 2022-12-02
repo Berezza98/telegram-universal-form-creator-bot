@@ -11,6 +11,10 @@ class LocalDB {
     return this.content;
   }
 
+  get questions() {
+    return this.data.questions
+  }
+
   async init() {
     const readableStream = fs.createReadStream(this.fileUrl);
 
